@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </head>
+  <body class="bg-slate-300">
+    <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
+      Where would <span id="first-name"></span>'s travel for vacation 🏳️?
+    </h2>
+    <main class="text-center container min-w-full py-4">
+      <div
+        class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
+      >
+        <!--Card 1-->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <img
+            class="w-full h-48 hover:h-full"
+            src="assets/images/dubai.png"
+            alt="Dubai"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-1">Dubai</div>
+          </div>
+        </div>
+
+        <!--Card 2-->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <img
+            class="w-full h-48 hover:h-full"
+            src="assets/images/france.png"
+            alt="France"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">France</div>
+          </div>
+        </div>
+
+        <!--Card 3-->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <img
+            class="w-full h-48 hover:h-full"
+            src="assets/images/australia.png"
+            alt="australia"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Australia</div>
+          </div>
+        </div>
+
+        <!--Card 4-->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <img
+            class="w-full h-48 hover:h-full"
+            src="assets/images/new-york.png"
+            alt="new york city"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">New York City</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const firstName = localStorage.getItem("first-name");
+
+      document.getElementById("first-name").textContent = firstName;
+    </script>
+  </body>
+</html>
