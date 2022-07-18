@@ -10,3 +10,7 @@
   position: relative;
   font-family: "Darker Grotesque", sans-serif;
 }
+
+.hide {
+  display: none;
+}
