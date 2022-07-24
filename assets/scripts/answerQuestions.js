@@ -11,6 +11,7 @@ document.getElementById("first-name").textContent = firstName;
 const submitBtn = document.getElementById("main-btn");
 const options = document.querySelectorAll(".options");
 const hideQuestions = document.querySelectorAll(".first-question");
+console.log(hideQuestions);
 
 allFirstName.forEach((allName) => {
   allName.textContent = firstName;

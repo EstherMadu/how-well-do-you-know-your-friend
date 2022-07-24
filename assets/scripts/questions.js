@@ -20,7 +20,9 @@ options.forEach((option) => {
     // option.style.borderColor = "green";
   });
 });
+
 hideQuestions.forEach((question) => {
+  console.log(question);
   question.addEventListener("click", function () {
     question.style.display = "none";
   });
