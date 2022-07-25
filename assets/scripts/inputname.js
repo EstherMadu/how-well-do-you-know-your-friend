@@ -6,7 +6,7 @@ submitBtn.addEventListener("click", function (e) {
   localStorage.setItem("first-name", firstNameValue);
 
   e.preventDefault();
-  window.location.href = "answerQuestions.html";
+  window.location.href = "";
 });
 
 // form.addEventListener("submit", function (e) {

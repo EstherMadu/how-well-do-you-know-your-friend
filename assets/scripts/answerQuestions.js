@@ -17,9 +17,35 @@ allFirstName.forEach((allName) => {
   allName.textContent = firstName;
 });
 
-// options.forEach((option) => {
-//   option.addEventListener("click", function () {
-//     console.log(option);
+options.forEach((option) => {
+  option.addEventListener("click", function () {
+    console.log(option);
+    const questionId = this.getAttribute("data-question-id");
+    const mainId = document.getElementById(questionId);
+    console.log(mainId);
+    console.log(`${questionId} : ${this.id}`);
+    if (answersLoad[questionId] === this.id) {
+      option.style.borderColor = "#00FF00";
+      result += 2;
+      console.log(result);
+      setTimeout(() => {
+        mainId.style.display = "none";
+      }, 1000);
+    } else {
+      option.style.borderColor = "#FF0000";
+      document.getElementById(answersLoad[questionId]).style.borderColor =
+        "#00FF00";
+      console.log(answersLoad);
+      setTimeout(() => {
+        mainId.style.display = "none";
+      }, 1000);
+    }
+  });
+});
+
+// hideQuestions.forEach((question) => {
+//   question.addEventListener("click", function () {
+//     question.style.display = "none";
 //     const questionId = this.getAttribute("data-question-id");
 //     console.log(`${questionId} : ${this.id}`);
 //     if (answersLoad[questionId] === this.id) {
@@ -36,26 +62,6 @@ allFirstName.forEach((allName) => {
 //     }
 //   });
 // });
-
-hideQuestions.forEach((question) => {
-  question.addEventListener("click", function () {
-    question.style.display = "none";
-    const questionId = this.getAttribute("data-question-id");
-    console.log(`${questionId} : ${this.id}`);
-    if (answersLoad[questionId] === this.id) {
-      option.style.borderColor = "#00FF00";
-      option.style.display = "none";
-      result += 2;
-      console.log(result);
-    } else {
-      option.style.borderColor = "#FF0000";
-      document.getElementById(answersLoad[questionId]).style.borderColor =
-        "#00FF00";
-      option.style.display = "none";
-      console.log(answersLoad);
-    }
-  });
-});
 
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
