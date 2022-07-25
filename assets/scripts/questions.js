@@ -37,29 +37,6 @@ options.forEach((option) => {
   });
 });
 
-// options.forEach((option) => {
-//   option.addEventListener("click", function () {
-//     const questionId = this.getAttribute("data-question-id");
-//     console.log(questionId);
-
-//     const mainId = document.getElementById(questionId);
-//     console.log(mainId);
-//     const answerId = this.id;
-
-//     console.log(answerId);
-//     answers[questionId] = answerId;
-//     option.style.borderColor = "green";
-//     mainId.style.display = "none";
-//   });
-// });
-
-// hideQuestions.forEach((question) => {
-//   console.log(question);
-//   question.addEventListener("click", function () {
-//     question.style.display = "none";
-//   });
-// });
-
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
   console.log(answers);
