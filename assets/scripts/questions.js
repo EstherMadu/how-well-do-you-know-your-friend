@@ -1,12 +1,12 @@
 const answers = {};
 const firstName = localStorage.getItem("first-name");
-console.log(firstName);
 const allFirstName = document.querySelectorAll("#first-name");
 const submitBtn = document.getElementById("main-btn");
 const options = document.querySelectorAll(".options");
 const hideQuestions = document.querySelectorAll(".first-question");
 const form = document.getElementById("form");
 document.querySelectorAll("#first-name").textContent = firstName;
+
 allFirstName.forEach((allName) => {
   allName.textContent = firstName;
 });

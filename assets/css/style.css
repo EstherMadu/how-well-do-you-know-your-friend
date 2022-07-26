@@ -12,8 +12,8 @@
   font-family: "Darker Grotesque", sans-serif;
 }
 
-.hide {
-  display: none;
+input:focus {
+  outline: none !important;
 }
 
 /* Design for table */

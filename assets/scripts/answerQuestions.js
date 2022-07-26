@@ -43,26 +43,6 @@ options.forEach((option) => {
   });
 });
 
-// hideQuestions.forEach((question) => {
-//   question.addEventListener("click", function () {
-//     question.style.display = "none";
-//     const questionId = this.getAttribute("data-question-id");
-//     console.log(`${questionId} : ${this.id}`);
-//     if (answersLoad[questionId] === this.id) {
-//       option.style.borderColor = "#00FF00";
-//       option.style.display = "none";
-//       result += 2;
-//       console.log(result);
-//     } else {
-//       option.style.borderColor = "#FF0000";
-//       document.getElementById(answersLoad[questionId]).style.borderColor =
-//         "#00FF00";
-//       option.style.display = "none";
-//       console.log(answersLoad);
-//     }
-//   });
-// });
-
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
   console.log(result);
