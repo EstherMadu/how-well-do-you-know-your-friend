@@ -2,6 +2,8 @@ let result = 0;
 const answers = localStorage.getItem("answers");
 console.log(answers);
 
+const obj = {};
+
 const answersLoad = JSON.parse(answers);
 console.log(answersLoad);
 const allFirstName = document.querySelectorAll("#first-name");
@@ -50,8 +52,15 @@ submitBtn.addEventListener("click", function (e) {
   console.log(result);
   const playerName = localStorage.getItem("players-name");
   console.log(playerName);
-  const playerScore = localStorage.setItem("result-score", result);
-  console.log(playerScore);
-  // window.location.href = "result.html";
+
+  obj[playerName] = result;
+  console.log(obj);
+
+  console.log(obj, "I am printing out");
+
+  const answerDump = JSON.stringify(obj);
+  localStorage.setItem("object", answerDump);
+
+  window.location.href = "result.html";
 });
 console.log(hideQuestions);
