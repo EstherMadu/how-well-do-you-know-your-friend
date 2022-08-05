@@ -51,15 +51,24 @@ submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
   console.log(result);
   const playerName = localStorage.getItem("players-name");
-  console.log(playerName);
+  const answerObj = localStorage.getItem("scoreboard");
+  // console.log(answerObj);
+  let newestObj = {};
+  if (answerObj === null) {
+    newestObj[playerName] = result;
+    console.log(newestObj, "I am newest object");
+  } else {
+    newestObj = JSON.parse(answerObj);
+    console.log(newestObj);
+    newestObj[playerName] = result;
+  }
+  // console.log(playerName);
 
-  obj[playerName] = result;
-  console.log(obj);
+  // console.log(obj, "I am printing out");
 
-  console.log(obj, "I am printing out");
-
-  const answerDump = JSON.stringify(obj);
-  localStorage.setItem("object", answerDump);
+  const answerDump = JSON.stringify(newestObj);
+  localStorage.setItem("scoreboard", answerDump);
+  console.log(answerDump);
 
   window.location.href = "result.html";
 });
