@@ -1,5 +1,6 @@
 const firstName = localStorage.getItem("first-name");
-const pu = window.location.origin + "/" + "inputname.html?" + "id=" + firstName;
+const shortUrl = localStorage.getItem(firstName);
+const pu = window.location.origin + "/" + "inputname.html?" + "id=" + shortUrl;
 const urlBtn = document.getElementById("url-btn");
 const uniqueUrl = document.getElementById("url");
 

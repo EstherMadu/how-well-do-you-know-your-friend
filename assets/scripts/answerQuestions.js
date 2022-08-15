@@ -1,11 +1,15 @@
 let result = 0;
-const answers = localStorage.getItem("answers");
+const answers = localStorage.getItem("challengeAnswers");
 console.log(answers);
 
 const obj = {};
 
 const answersLoad = JSON.parse(answers);
 console.log(answersLoad);
+
+// const newAnswersLoad = JSON.stringify(answersLoad);
+// console.log(newAnswersLoad);
+
 const allFirstName = document.querySelectorAll("#first-name");
 const firstName = localStorage.getItem("first-name");
 console.log(firstName);
@@ -36,22 +40,10 @@ options.forEach((option) => {
         mainId.style.display = "none";
       }, 1000);
     } else {
-      option.style.borderColor = "#FF0000";
-      // option.insertRule(`@keyframes shake {
-      //   0% { transform: translate(1px, 1px) rotate(0deg); }
-      //   10% { transform: translate(-1px, -2px) rotate(-1deg); }
-      //   20% { transform: translate(-3px, 0px) rotate(1deg); }
-      //   30% { transform: translate(3px, 2px) rotate(0deg); }
-      //   40% { transform: translate(1px, -1px) rotate(1deg); }
-      //   50% { transform: translate(-1px, 2px) rotate(-1deg); }
-      //   60% { transform: translate(-3px, 1px) rotate(0deg); }
-      //   70% { transform: translate(3px, 1px) rotate(-1deg); }
-      //   80% { transform: translate(-1px, -1px) rotate(1deg); }
-      //   90% { transform: translate(1px, 2px) rotate(0deg); }
-      //   100% { transform: translate(1px, -2px) rotate(-1deg); }
-      // } `);
       document.getElementById(answersLoad[questionId]).style.borderColor =
         "#00FF00";
+      option.style.borderColor = "#FF0000";
+      // option.className = "shake";
       console.log(answersLoad);
       setTimeout(() => {
         mainId.style.display = "none";
@@ -75,9 +67,6 @@ submitBtn.addEventListener("click", function (e) {
     console.log(newestObj);
     newestObj[playerName] = result;
   }
-  // console.log(playerName);
-
-  // console.log(obj, "I am printing out");
 
   const answerDump = JSON.stringify(newestObj);
   localStorage.setItem("scoreboard", answerDump);

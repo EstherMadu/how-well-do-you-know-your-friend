@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="assets/css/answerQuestions.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-slate-300">
+  <body class="">
     <main
       class="text-center container min-w-full py-4 font-serif text-slate-900"
     >
       <!-- Question 1 -->
-      <div id="1" class="first-question">
+      <div id="1" class="first-question shadow-xl">
         <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
           what is your favourite drink🍹?
         </h2>
         <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
+          class="p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-5"
         >
           <!--Card 1-->
           <div
@@ -88,12 +88,12 @@
       </div>
 
       <!-- Question 2 -->
-      <div class="first-question" id="2">
+      <div class="first-question slide-2" id="2">
         <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
           which country would you travel for vacation?
         </h2>
         <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
+          class="p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-5"
         >
           <!--Card 1-->
           <div
@@ -162,12 +162,12 @@
       </div>
 
       <!-- Question 3 -->
-      <div class="first-question" id="3">
+      <div class="first-question shadow-2xl" id="3">
         <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
           what is your favourite meal time🍹?
         </h2>
         <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
+          class="p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-5"
         >
           <!--Card 1-->
           <div
@@ -242,7 +242,7 @@
           <span id="first-name"></span> love to have?
         </h2>
         <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
+          class="p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-5"
         >
           <!--Card 1-->
           <div
@@ -299,13 +299,13 @@
       </div>
 
       <!-- Question 5 -->
-      <div id="5" class="first-question">
+      <div id="5" class="first-question shadow-xl">
         <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
           What type of movie does
           <span id="first-name"></span> love to watch?
         </h2>
         <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
+          class="p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-5"
         >
           <!--Card 1-->
           <div
@@ -380,7 +380,7 @@
           <span id="first-name"></span> do in free time?
         </h2>
         <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
+          class="p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-5"
         >
           <!--Card 1-->
           <div
@@ -394,7 +394,7 @@
               alt="A lady holding bags"
             />
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-1">Shopping</div>
+              <div class="font-bold text-xl mb-1">Shop</div>
             </div>
           </div>
 
@@ -410,7 +410,7 @@
               alt="a man holding a gun"
             />
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Sleeping</div>
+              <div class="font-bold text-xl mb-2">Sleep</div>
             </div>
           </div>
 
@@ -426,7 +426,7 @@
               alt="reading"
             />
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Reading</div>
+              <div class="font-bold text-xl mb-2">Read</div>
             </div>
           </div>
 
@@ -442,7 +442,7 @@
               alt="a strong man exercising"
             />
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Exercising</div>
+              <div class="font-bold text-xl mb-2">Exercise</div>
             </div>
           </div>
         </div>
@@ -451,13 +451,46 @@
       <form action="success.html" id="form">
         <button
           type="submit"
-          class="bg-transparent hover:bg-slate-600 text-slate-900 font-semibold hover:text-white py-2 px-4 border border-red-900 hover:border-transparent rounded my-11"
+          class="bg-transparent hover:bg-slate-600 text-slate-900 font-semibold hover:text-white py-2 px-4 border border-red-900 hover:border-transparent rounded my-32"
           id="main-btn"
         >
           Submit
         </button>
       </form>
     </main>
+    <!-- <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+
+      <ul class="social-icon">
+        <li>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+        </li>
+      </ul>
+
+      <p>© 2022 Abbacoder | All Rights Reserved</p>
+    </footer> -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="assets/scripts/questions.js"></script>
   </body>
 </html>

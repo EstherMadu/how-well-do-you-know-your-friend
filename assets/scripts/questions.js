@@ -7,6 +7,22 @@ const hideQuestions = document.querySelectorAll(".first-question");
 const form = document.getElementById("form");
 document.querySelectorAll("#first-name").textContent = firstName;
 
+const doPost = async function (data) {
+  // call function inside this function
+  const request = await fetch(
+    "https://intense-oasis-82033.herokuapp.com/set_answers",
+    {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  const response = request.json();
+  return response;
+};
+
 allFirstName.forEach((allName) => {
   allName.textContent = firstName;
 });
@@ -39,8 +55,20 @@ options.forEach((option) => {
 
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
+
   console.log(answers);
-  const answerDump = JSON.stringify(answers);
-  localStorage.setItem("answers", JSON.stringify(answers));
-  window.location.href = "success.html";
+  doPost({
+    owner_id: firstName,
+    answers: answers,
+  })
+    .then((result) => {
+      console.log(result);
+      localStorage.setItem(firstName, result.short_url);
+      window.location.href = "success.html";
+    })
+    .catch((err) => {
+      console.log("It failed" + err);
+    });
+  // const answerDump = JSON.stringify(answers);
+  // localStorage.setItem("answers", JSON.stringify(answers));
 });
