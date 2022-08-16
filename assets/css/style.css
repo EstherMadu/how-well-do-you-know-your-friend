@@ -29,10 +29,14 @@ body {
 }
 
 main .first-question {
-  position: absolute;
   background-color: antiquewhite;
   border-radius: 16px;
   margin: 50px 0;
+  display: none;
+}
+
+.first-question.active {
+  display: block;
 }
 
 .secActive {

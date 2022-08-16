@@ -1,470 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Questions</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/answerQuestions.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class=>
-    <main class="text-center container min-w-full py-4 font-serif text-slate-900">
-      <!-- Question 1 -->
-      <div id="1" class="first-question">
-        <h2 class="py-4 text-3xl md:text-5xl text-center py-10 ">
-          what is
-          <span id="first-name"></span>'s favourite drink🍹?
-        </h2>
-        <div
-          class="p-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
-        >
-          <!--Card 1-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="water"
-            data-question-id="1"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/water.png"
-              alt="Water"
-              id="water-img"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-1 ">Water</div>
-            </div>
-          </div>
 
-          <!--Card 2-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="coffee"
-            data-question-id="1"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/coffee.png"
-              alt="Coffee"
-              id="coffee-img"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Coffee</div>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questions</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/answerQuestions.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-          <!--Card 3-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="smoothie"
-            data-question-id="1"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/smoothie.png"
-              alt="smoothie"
-              id="smoothie-img"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Smoothie</div>
-            </div>
+<body class=>
+  <main class="text-center container min-w-full py-4 font-serif text-slate-900">
+    <!-- Question 1 -->
+    <div id="question-1" class="first-question active">
+      <h2 class="py-4 text-3xl md:text-5xl text-center py-10 ">
+        what is
+        <span id="first-name"></span>'s favourite drink🍹?
+      </h2>
+      <div class="p-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+        <!--Card 1-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="water" data-question-id="1">
+          <img class="w-full h-48" src="assets/images/water.png" alt="Water" id="water-img" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-1 ">Water</div>
           </div>
+        </div>
 
-          <!--Card 4-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="orange-juice"
-            data-question-id="1"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/orange-juice.png"
-              alt="orange juice"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Orange Juice</div>
-            </div>
+        <!--Card 2-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="coffee" data-question-id="1">
+          <img class="w-full h-48" src="assets/images/coffee.png" alt="Coffee" id="coffee-img" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Coffee</div>
+          </div>
+        </div>
+
+        <!--Card 3-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="smoothie" data-question-id="1">
+          <img class="w-full h-48" src="assets/images/smoothie.png" alt="smoothie" id="smoothie-img" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Smoothie</div>
+          </div>
+        </div>
+
+        <!--Card 4-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="orange-juice" data-question-id="1">
+          <img class="w-full h-48" src="assets/images/orange-juice.png" alt="orange juice" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Orange Juice</div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Question 2 -->
-      <div id="2" class="first-question">
-        <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
-          which country would
-          <span id="first-name"></span> travel for vacation?
-        </h2>
-        <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
-        >
-          <!--Card 1-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="dubai"
-            data-question-id="2"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/dubai.png"
-              alt="Dubai"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-1">Dubai</div>
-            </div>
+    <!-- Question 2 -->
+    <div id="question-2" class="first-question">
+      <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
+        which country would
+        <span id="first-name"></span> travel for vacation?
+      </h2>
+      <div class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+        <!--Card 1-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="dubai" data-question-id="2">
+          <img class="w-full h-48" src="assets/images/dubai.png" alt="Dubai" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-1">Dubai</div>
           </div>
+        </div>
 
-          <!--Card 2-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="france"
-            data-question-id="2"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/france.png"
-              alt="France"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">France</div>
-            </div>
+        <!--Card 2-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="france" data-question-id="2">
+          <img class="w-full h-48" src="assets/images/france.png" alt="France" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">France</div>
           </div>
+        </div>
 
-          <!--Card 3-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="australia"
-            data-question-id="2"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/australia.png"
-              alt="australia"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Australia</div>
-            </div>
+        <!--Card 3-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="australia" data-question-id="2">
+          <img class="w-full h-48" src="assets/images/australia.png" alt="australia" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Australia</div>
           </div>
+        </div>
 
-          <!--Card 4-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="new-york"
-            data-question-id="2"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/new-york.png"
-              alt="new york city"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">New York City</div>
-            </div>
+        <!--Card 4-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="new-york" data-question-id="2">
+          <img class="w-full h-48" src="assets/images/new-york.png" alt="new york city" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">New York City</div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Question 3 -->
-      <div id="3" class="first-question">
-        <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
-          what is
-          <span id="first-name"></span>'s favourite meal time🍹?
-        </h2>
-        <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
-        >
-          <!--Card 1-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="breakfast"
-            data-question-id="3"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/breakfast.png"
-              alt="Breakfast"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-1">Breakfast</div>
-            </div>
+    <!-- Question 3 -->
+    <div id="question-3" class="first-question">
+      <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
+        what is
+        <span id="first-name"></span>'s favourite meal time🍹?
+      </h2>
+      <div class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+        <!--Card 1-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="breakfast" data-question-id="3">
+          <img class="w-full h-48" src="assets/images/breakfast.png" alt="Breakfast" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-1">Breakfast</div>
           </div>
+        </div>
 
-          <!--Card 2-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="lunch"
-            data-question-id="3"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/lunch.png"
-              alt="lunch"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Lunch</div>
-            </div>
+        <!--Card 2-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="lunch" data-question-id="3">
+          <img class="w-full h-48" src="assets/images/lunch.png" alt="lunch" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Lunch</div>
           </div>
+        </div>
 
-          <!--Card 3-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="dinner"
-            data-question-id="3"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/australia.png"
-              alt="dinner"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Dinner</div>
-            </div>
+        <!--Card 3-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="dinner" data-question-id="3">
+          <img class="w-full h-48" src="assets/images/australia.png" alt="dinner" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Dinner</div>
           </div>
+        </div>
 
-          <!--Card 4-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="brunch"
-            data-question-id="3"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/new-york.png"
-              alt="new york city"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Brunch</div>
-            </div>
+        <!--Card 4-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="brunch" data-question-id="3">
+          <img class="w-full h-48" src="assets/images/new-york.png" alt="new york city" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Brunch</div>
           </div>
         </div>
       </div>
+    </div>
 
-
-      <!-- Question 4 -->
-      <div id="4" class="first-question">
-        <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
-          Which animal would
-          <span id="first-name"></span> love to have?
-        </h2>
-        <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
-        >
-          <!--Card 1-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="dog"
-            data-question-id="4"
-          >
-            <img class="w-full h-48" src="assets/images/dog.jpg" alt="A dog" />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-1">A Dog</div>
-            </div>
+    <!-- Question 4 -->
+    <div id="question-4" class="first-question">
+      <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
+        Which animal would
+        <span id="first-name"></span> love to have?
+      </h2>
+      <div class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+        <!--Card 1-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="dog" data-question-id="4">
+          <img class="w-full h-48" src="assets/images/dog.jpg" alt="A dog" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-1">A Dog</div>
           </div>
+        </div>
 
-          <!--Card 2-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="cat"
-            data-question-id="4"
-          >
-            <img class="w-full h-48" src="assets/images/cat.jpg" alt="cat" />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">A Cat</div>
-            </div>
+        <!--Card 2-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="cat" data-question-id="4">
+          <img class="w-full h-48" src="assets/images/cat.jpg" alt="cat" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">A Cat</div>
           </div>
+        </div>
 
-          <!--Card 3-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="parrot"
-            data-question-id="4"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/parrot.jpg"
-              alt="a parrot"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">A Parrot</div>
-            </div>
+        <!--Card 3-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="parrot" data-question-id="4">
+          <img class="w-full h-48" src="assets/images/parrot.jpg" alt="a parrot" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">A Parrot</div>
           </div>
+        </div>
 
-          <!--Card 4-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="pig"
-            data-question-id="4"
-          >
-            <img class="w-full h-48" src="assets/images/pig.jpg" alt="a pig" />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">A Pig</div>
-            </div>
+        <!--Card 4-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="pig" data-question-id="4">
+          <img class="w-full h-48" src="assets/images/pig.jpg" alt="a pig" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">A Pig</div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Question 5 -->
-      <div id="5" class="first-question">
-        <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
-          What type of movie does
-          <span id="first-name"></span> love to watch?
-        </h2>
-        <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
-        >
-          <!--Card 1-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="romance"
-            data-question-id="5"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/romance.png"
-              alt="Romantic image"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-1">Romance</div>
-            </div>
+    <!-- Question 5 -->
+    <div id="question-5" class="first-question">
+      <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
+        What type of movie does
+        <span id="first-name"></span> love to watch?
+      </h2>
+      <div class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+        <!--Card 1-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="romance" data-question-id="5">
+          <img class="w-full h-48" src="assets/images/romance.png" alt="Romantic image" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-1">Romance</div>
           </div>
+        </div>
 
-          <!--Card 2-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="action"
-            data-question-id="5"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/action-movie.png"
-              alt="a man holding a gun"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Action</div>
-            </div>
+        <!--Card 2-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="action" data-question-id="5">
+          <img class="w-full h-48" src="assets/images/action-movie.png" alt="a man holding a gun" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Action</div>
           </div>
+        </div>
 
-          <!--Card 3-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="comedy"
-            data-question-id="5"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/comedy.png"
-              alt="comedy movie"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Comedy</div>
-            </div>
+        <!--Card 3-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="comedy" data-question-id="5">
+          <img class="w-full h-48" src="assets/images/comedy.png" alt="comedy movie" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Comedy</div>
           </div>
+        </div>
 
-          <!--Card 4-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="animation"
-            data-question-id="5"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/animation.png"
-              alt="the minions"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Cartoons</div>
-            </div>
+        <!--Card 4-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="animation" data-question-id="5">
+          <img class="w-full h-48" src="assets/images/animation.png" alt="the minions" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Cartoons</div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Question 6 -->
-      <div id="6" class="first-question">
-        <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
-          What does
-          <span id="first-name"></span> do in free time?
-        </h2>
-        <div
-          class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
-        >
-          <!--Card 1-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="shopping"
-            data-question-id="6"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/shopping.png"
-              alt="A lady holding bags"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-1">Shop</div>
-            </div>
+    <!-- Question 6 -->
+    <div id="question-6" class="first-question">
+      <h2 class="py-4 text-3xl md:text-5xl text-center py-10">
+        What does
+        <span id="first-name"></span> do in free time?
+      </h2>
+      <div class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+        <!--Card 1-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="shopping" data-question-id="6">
+          <img class="w-full h-48" src="assets/images/shopping.png" alt="A lady holding bags" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-1">Shop</div>
           </div>
+        </div>
 
-          <!--Card 2-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="sleeping"
-            data-question-id="6"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/sleeping.png"
-              alt="legs Sleeping"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Sleep</div>
-            </div>
+        <!--Card 2-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="sleeping" data-question-id="6">
+          <img class="w-full h-48" src="assets/images/sleeping.png" alt="legs Sleeping" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Sleep</div>
           </div>
+        </div>
 
-          <!--Card 3-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="reading"
-            data-question-id="6"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/reading.png"
-              alt="reading"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Read</div>
-            </div>
+        <!--Card 3-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="reading" data-question-id="6">
+          <img class="w-full h-48" src="assets/images/reading.png" alt="reading" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Read</div>
           </div>
+        </div>
 
-          <!--Card 4-->
-          <div
-            class="options max-w-sm rounded overflow-hidden shadow-lg"
-            id="exercise"
-            data-question-id="6"
-          >
-            <img
-              class="w-full h-48"
-              src="assets/images/exercise.png"
-              alt="a strong man exercising"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Exercise</div>
-            </div>
+        <!--Card 4-->
+        <div class="options max-w-sm rounded overflow-hidden shadow-lg" id="exercise" data-question-id="6">
+          <img class="w-full h-48" src="assets/images/exercise.png" alt="a strong man exercising" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Exercise</div>
           </div>
         </div>
       </div>
+    </div>
+  </main>
+  <!-- <script src="assets/scripts/result.js"></script> -->
+  <script src="assets/scripts/answerQuestions.js"></script>
 
-      <form action="" id="form">
-        <button
-          type="submit"
-          class="bg-transparent hover:bg-slate-600 text-slate-900 font-semibold hover:text-white py-2 px-4 border border-red-900 hover:border-transparent rounded my-11"
-          id="main-btn"
-        >
-          Submit
-        </button>
-      </form>
-    </main>
-    <!-- <script src="assets/scripts/result.js"></script> -->
-    <script src="assets/scripts/answerQuestions.js"></script>
+</body>
 
-  </body>
 </html>

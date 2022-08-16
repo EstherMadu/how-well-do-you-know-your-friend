@@ -29,31 +29,32 @@ options.forEach((option) => {
   option.addEventListener("click", function () {
     console.log(option);
     const questionId = this.getAttribute("data-question-id");
-    const mainId = document.getElementById(questionId);
-    console.log(mainId);
-    console.log(`${questionId} : ${this.id}`);
+    const currentQuestion = document.getElementById(`question-${ questionId }`);
+    const nextQuestion = document.getElementById(`question-${ +questionId + 1 }`);
+    console.log(currentQuestion);
+    console.log(`${ questionId } : ${ this.id }`);
     if (answersLoad[questionId] === this.id) {
-      option.style.borderColor = "#00FF00";
+      this.style.border = "2px solid #00FF00";
       result += 2;
       console.log(result);
-      setTimeout(() => {
-        mainId.style.display = "none";
-      }, 1000);
     } else {
-      document.getElementById(answersLoad[questionId]).style.borderColor =
-        "#00FF00";
-      option.style.borderColor = "#FF0000";
-      // option.className = "shake";
+      document.getElementById(answersLoad[questionId]).style.borderColor = "#00FF00";
+      this.style.border = "2px solid red";
+      option.classList.add("shake");
       console.log(answersLoad);
-      setTimeout(() => {
-        mainId.style.display = "none";
-      }, 1000);
     }
+    setTimeout(() => {
+      currentQuestion.style.display = "none";
+      currentQuestion.classList.remove('active');
+      if (nextQuestion) nextQuestion.classList.add('active');
+      else {
+        handleSubmit();
+      }
+    }, 1000);
   });
 });
 
-submitBtn.addEventListener("click", function (e) {
-  e.preventDefault();
+function handleSubmit() {
   console.log(result);
   const playerName = localStorage.getItem("players-name");
   const answerObj = localStorage.getItem("scoreboard");
@@ -73,5 +74,4 @@ submitBtn.addEventListener("click", function (e) {
   console.log(answerDump);
 
   window.location.href = "result.html";
-});
-console.log(hideQuestions);
+}
