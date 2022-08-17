@@ -35,27 +35,7 @@ const delayLoop = (fn, delay) => {
   };
 };
 
-options.forEach((option) => {
-  option.addEventListener("click", function () {
-    const questionId = this.getAttribute("data-question-id");
-    console.log(questionId);
-
-    const mainId = document.getElementById(questionId);
-    console.log(mainId);
-    const answerId = this.id;
-
-    console.log(answerId);
-    answers[questionId] = answerId;
-    option.style.borderColor = "green";
-    setTimeout(() => {
-      mainId.style.display = "none";
-    }, 1000);
-  });
-});
-
-submitBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-
+function handleSubmit() {
   console.log(answers);
   doPost({
     owner_id: firstName,
@@ -69,6 +49,29 @@ submitBtn.addEventListener("click", function (e) {
     .catch((err) => {
       console.log("It failed" + err);
     });
-  // const answerDump = JSON.stringify(answers);
-  // localStorage.setItem("answers", JSON.stringify(answers));
+}
+
+options.forEach((option) => {
+  option.addEventListener("click", function () {
+    const questionId = this.getAttribute("data-question-id");
+    const currentQuestion = document.getElementById(`question-${questionId}`);
+    const nextQuestion = document.getElementById(`question-${+questionId + 1}`);
+    const answer = this.id;
+    answers[questionId] = answer;
+    this.style.border = "2px solid #00FF00";
+    setTimeout(() => {
+      currentQuestion.classList.remove("active");
+      if (nextQuestion) nextQuestion.classList.add("active");
+      else {
+        handleSubmit();
+      }
+    }, 1000);
+  });
 });
+
+// submitBtn.addEventListener("click", function (e) {
+//   e.preventDefault();
+
+//   // const answerDump = JSON.stringify(answers);
+//   // localStorage.setItem("answers", JSON.stringify(answers));
+// });
