@@ -68,10 +68,3 @@ options.forEach((option) => {
     }, 1000);
   });
 });
-
-// submitBtn.addEventListener("click", function (e) {
-//   e.preventDefault();
-
-//   // const answerDump = JSON.stringify(answers);
-//   // localStorage.setItem("answers", JSON.stringify(answers));
-// });

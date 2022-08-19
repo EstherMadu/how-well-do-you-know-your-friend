@@ -33,6 +33,11 @@ main .first-question {
   display: block;
 }
 
+.unique {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
 /* Design for table */
 table {
   font-family: arial, sans-serif;

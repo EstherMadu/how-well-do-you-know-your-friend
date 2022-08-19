@@ -3,23 +3,36 @@ const answers = localStorage.getItem("challengeAnswers");
 console.log(answers);
 
 const obj = {};
-
+z;
 const answersLoad = JSON.parse(answers);
 console.log(answersLoad);
-
-// const newAnswersLoad = JSON.stringify(answersLoad);
-// console.log(newAnswersLoad);
 
 const allFirstName = document.querySelectorAll("#first-name");
 const firstName = localStorage.getItem("first-name");
 console.log(firstName);
+const playerName = localStorage.getItem("players-name");
 
 document.getElementById("first-name").textContent = firstName;
 
 const submitBtn = document.getElementById("main-btn");
 const options = document.querySelectorAll(".options");
-const hideQuestions = document.querySelectorAll(".first-question");
-console.log(hideQuestions);
+// const hideQuestions = document.querySelectorAll(".first-question");
+// console.log(hideQuestions);
+
+const postResult = async function (data) {
+  const apiResult = await fetch(
+    "https://intense-oasis-82033.herokuapp.com/set_score",
+    {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  const response = await apiResult.json();
+  return response;
+};
 
 allFirstName.forEach((allName) => {
   allName.textContent = firstName;
@@ -74,5 +87,20 @@ function handleSubmit() {
   localStorage.setItem("scoreboard", answerDump);
   console.log(answerDump);
 
-  window.location.href = "result.html";
+  const getId = localStorage.getItem("unique-id");
+  console.log(getId);
+
+  postResult({
+    result: result,
+    player_name: playerName,
+    challenge_id: getId,
+  })
+    .then((result) => {
+      console.log(result);
+
+      window.location.href = "result.html";
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }

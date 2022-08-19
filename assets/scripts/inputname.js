@@ -1,7 +1,9 @@
 console.log(window.location.href);
 const params = new URLSearchParams(window.location.search);
 const newId = params.get("id");
-console.log(newId);
+
+const saveId = localStorage.setItem("unique-id", newId);
+console.log(saveId);
 
 const form = document.getElementById("form");
 const submitBtn = document.getElementById("btn1");

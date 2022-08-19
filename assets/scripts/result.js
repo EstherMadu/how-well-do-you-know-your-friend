@@ -6,11 +6,33 @@ console.log(table);
 const playerName = document.getElementById("input-name");
 
 const playerScore = document.getElementById("score");
+const newPlayerBtn = document.getElementById("play-btn");
 
 const playerResult = localStorage.getItem("scoreboard");
 console.log(playerResult);
 const resultLoad = JSON.parse(playerResult);
+const newId = localStorage.getItem("unique-id");
 // console.log(resultLoad);
+
+const doGet = async function (id) {
+  const apiResult = await fetch(
+    "https://intense-oasis-82033.herokuapp.com/get_scoreboard/" + id,
+    {
+      method: "GET",
+    }
+  );
+  console.log(apiResult, "imabbbbefoore" + 4);
+  const response = apiResult.json();
+  return response;
+};
+
+doGet(newId)
+  .then((result) => {
+    console.log("This is the" + result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 // Loop through result load to retrieve key and value
 
@@ -24,5 +46,7 @@ for (const key in resultLoad) {
   console.log(`${key}: ${resultLoad[key]}`);
 }
 
-//check if object exists in local storage
-// if it does load it
+newPlayerBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = "index.html";
+});
