@@ -1,9 +1,11 @@
 let result = 0;
 const answers = localStorage.getItem("challengeAnswers");
 console.log(answers);
-
+if (localStorage.getItem("hasAnswered") === "true") {
+  window.location.href = "result.html";
+}
 const obj = {};
-z;
+
 const answersLoad = JSON.parse(answers);
 console.log(answersLoad);
 
@@ -73,6 +75,7 @@ function handleSubmit() {
   const playerName = localStorage.getItem("players-name");
   const answerObj = localStorage.getItem("scoreboard");
   // console.log(answerObj);
+
   let newestObj = {};
   if (answerObj === null) {
     newestObj[playerName] = result;
@@ -97,6 +100,7 @@ function handleSubmit() {
   })
     .then((result) => {
       console.log(result);
+      localStorage.setItem("hasAnswered", true);
 
       window.location.href = "result.html";
     })

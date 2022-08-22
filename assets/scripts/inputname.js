@@ -2,8 +2,12 @@ console.log(window.location.href);
 const params = new URLSearchParams(window.location.search);
 const newId = params.get("id");
 
-const saveId = localStorage.setItem("unique-id", newId);
-console.log(saveId);
+localStorage.setItem("unique-id", newId);
+console.log("I am working", localStorage.getItem("hasAnswered"));
+
+if (localStorage.getItem("hasAnswered") === "true") {
+  window.location.href = "result.html";
+}
 
 const form = document.getElementById("form");
 const submitBtn = document.getElementById("btn1");
@@ -24,7 +28,7 @@ const doPost = async function (data) {
       },
     }
   );
-  const response = request.json();
+  const response = await request.json();
   return response;
 };
 
