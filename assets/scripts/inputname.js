@@ -16,7 +16,7 @@ const submitBtn = document.getElementById("btn1");
 const firstName = storage.firstName;
 console.log(firstName);
 const playerNameInput = document.getElementById("players-name");
-document.getElementById("user-name").textContent = firstName;
+// document.getElementById("user-name").textContent = firstName;
 
 const doPost = async function (data) {
   // call function inside this function
@@ -41,6 +41,8 @@ doPost({
     console.log(result);
     console.log(result.owner_id);
     storage.firstName = result.owner_id;
+
+    document.getElementById("user-name").textContent = result.owner_id;
     storage.answer = JSON.stringify(result.answers);
     //localStorage.setItem("challengeAnswers", JSON.stringify(result.answers));
   })
