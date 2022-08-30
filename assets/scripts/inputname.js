@@ -1,9 +1,11 @@
+import { storage } from "./storage.js";
+
 console.log(window.location.href);
 const params = new URLSearchParams(window.location.search);
 const newId = params.get("id");
 
 localStorage.setItem("unique-id", newId);
-console.log("I am working", localStorage.getItem("hasAnswered"));
+//newId = storage.uniqueId;
 
 if (localStorage.getItem("hasAnswered") === "true") {
   window.location.href = "result.html";
@@ -11,9 +13,9 @@ if (localStorage.getItem("hasAnswered") === "true") {
 
 const form = document.getElementById("form");
 const submitBtn = document.getElementById("btn1");
-const firstName = localStorage.getItem("first-name");
+const firstName = storage.firstName;
 console.log(firstName);
-const playerName = document.getElementById("players-name");
+const playerNameInput = document.getElementById("players-name");
 document.getElementById("user-name").textContent = firstName;
 
 const doPost = async function (data) {
@@ -37,9 +39,10 @@ doPost({
 })
   .then((result) => {
     console.log(result);
-    console.log(result.answers);
-
-    localStorage.setItem("challengeAnswers", JSON.stringify(result.answers));
+    console.log(result.owner_id);
+    storage.firstName = result.owner_id;
+    storage.answer = JSON.stringify(result.answers);
+    //localStorage.setItem("challengeAnswers", JSON.stringify(result.answers));
   })
   .catch((err) => {
     console.log("It failed woefully" + err);
@@ -47,10 +50,9 @@ doPost({
 
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  const playerNameValue = playerName.value;
-  console.log(playerNameValue);
-
-  localStorage.setItem("players-name", playerNameValue);
+  const playerName = playerNameInput.value;
+  storage.playerName = playerName;
+  console.log(playerName);
 
   window.location.href = "answerQuestions.html";
 });

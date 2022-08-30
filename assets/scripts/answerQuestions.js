@@ -1,5 +1,8 @@
+import { storage } from "./storage.js";
+
 let result = 0;
-const answers = localStorage.getItem("challengeAnswers");
+const answers = storage.answer;
+//localStorage.getItem("challengeAnswers");
 console.log(answers);
 if (localStorage.getItem("hasAnswered") === "true") {
   window.location.href = "result.html";
@@ -10,9 +13,11 @@ const answersLoad = JSON.parse(answers);
 console.log(answersLoad);
 
 const allFirstName = document.querySelectorAll("#first-name");
-const firstName = localStorage.getItem("first-name");
+const firstName = storage.firstName;
+//localStorage.getItem("first-name");
 console.log(firstName);
-const playerName = localStorage.getItem("players-name");
+const playerName = storage.playerName;
+//localStorage.getItem("players-name");
 
 document.getElementById("first-name").textContent = firstName;
 

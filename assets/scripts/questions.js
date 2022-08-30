@@ -1,5 +1,8 @@
+import { storage } from "./storage.js";
+
 const answers = {};
-const firstName = localStorage.getItem("first-name");
+const firstName = storage.firstName;
+//localStorage.getItem("first-name");
 const allFirstName = document.querySelectorAll("#first-name");
 const submitBtn = document.getElementById("main-btn");
 const options = document.querySelectorAll(".options");
@@ -68,3 +71,5 @@ options.forEach((option) => {
     }, 1000);
   });
 });
+
+// I cant bear the noise coming from your end
