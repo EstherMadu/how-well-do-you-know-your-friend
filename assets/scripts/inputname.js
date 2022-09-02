@@ -7,7 +7,7 @@ const newId = params.get("id");
 localStorage.setItem("unique-id", newId);
 //newId = storage.uniqueId;
 
-if (localStorage.getItem("hasAnswered") === "true") {
+if (localStorage.getItem(getId) === "true") {
   window.location.href = "result.html";
 }
 

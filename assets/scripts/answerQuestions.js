@@ -4,7 +4,7 @@ let result = 0;
 const answers = storage.answer;
 //localStorage.getItem("challengeAnswers");
 console.log(answers);
-if (localStorage.getItem("hasAnswered") === "true") {
+if (localStorage.getItem(getId) === "true") {
   window.location.href = "result.html";
 }
 const obj = {};
@@ -14,10 +14,9 @@ console.log(answersLoad);
 
 const allFirstName = document.querySelectorAll("#first-name");
 const firstName = storage.firstName;
-//localStorage.getItem("first-name");
+
 console.log(firstName);
 const playerName = storage.playerName;
-//localStorage.getItem("players-name");
 
 document.getElementById("first-name").textContent = firstName;
 
@@ -105,7 +104,7 @@ function handleSubmit() {
   })
     .then((result) => {
       console.log(result);
-      localStorage.setItem("hasAnswered", true);
+      localStorage.setItem(getId, true);
 
       window.location.href = "result.html";
     })

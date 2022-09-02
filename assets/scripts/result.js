@@ -35,9 +35,3 @@ newPlayerBtn.addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href = "index.html";
 });
-
-// By tomorrow confirm that Jaosn has cleared the database
-// Clear local storage and run the code form beginning ad see it work
-// For my table make sure ure using result.result to call the value
-// The table I have below I will move it into the .then where I have console.log(data) because I want populate the table in the htl with the information on the data.
-//  where I have result load, resultLoad should be equalt to data.result, for it to work properly I have to move all the table to the .then so it works properly.
