@@ -1,5 +1,8 @@
 import { storage } from "./storage.js";
 
+const getId = localStorage.getItem("unique-id");
+console.log(getId);
+
 let result = 0;
 const answers = storage.answer;
 //localStorage.getItem("challengeAnswers");
@@ -93,9 +96,6 @@ function handleSubmit() {
   const answerDump = JSON.stringify(newestObj);
   localStorage.setItem("scoreboard", answerDump);
   console.log(answerDump);
-
-  const getId = localStorage.getItem("unique-id");
-  console.log(getId);
 
   postResult({
     result: result,
