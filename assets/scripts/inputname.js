@@ -7,8 +7,9 @@ const newId = params.get("id");
 localStorage.setItem("unique-id", newId);
 //newId = storage.uniqueId;
 
-if (localStorage.getItem(getId) === "true") {
-  window.location.href = "result.html";
+console.log(newId, localStorage.getItem(newId));
+if (localStorage.getItem(newId) === "true") {
+  window.location.href = "success.html";
 }
 
 const form = document.getElementById("form");
@@ -73,4 +74,6 @@ submitBtn.addEventListener("click", function (e) {
 
 //  When they come on the page if they have asked the questions direct them to result.js
 
-//  Okay.
+//  Nothing else
+
+// For Table Session

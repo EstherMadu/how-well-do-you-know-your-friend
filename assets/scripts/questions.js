@@ -47,6 +47,7 @@ function handleSubmit() {
     .then((result) => {
       console.log(result);
       localStorage.setItem(firstName, result.short_url);
+      localStorage.setItem(result.short_url, true);
       window.location.href = "success.html";
     })
     .catch((err) => {
