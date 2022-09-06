@@ -96,6 +96,7 @@ function handleSubmit() {
   const answerDump = JSON.stringify(newestObj);
   localStorage.setItem("scoreboard", answerDump);
   console.log(answerDump);
+  console.log(getId);
 
   postResult({
     result: result,
