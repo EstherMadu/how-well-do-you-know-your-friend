@@ -1,4 +1,5 @@
 import { storage } from "./storage.js";
+import load from "./window_load.js";
 
 const getId = localStorage.getItem("unique-id");
 console.log(getId);
@@ -113,3 +114,9 @@ function handleSubmit() {
       console.log(err);
     });
 }
+
+load();
+
+// $(window).on("load", function () {
+//   $(".cssload-preloader").fadeOut("slow");
+// });

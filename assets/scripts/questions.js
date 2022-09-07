@@ -1,4 +1,5 @@
 import { storage } from "./storage.js";
+import load from "./window_load.js";
 
 const answers = {};
 const firstName = storage.firstName;
@@ -73,4 +74,4 @@ options.forEach((option) => {
   });
 });
 
-// I cant bear the noise coming from your end
+load();

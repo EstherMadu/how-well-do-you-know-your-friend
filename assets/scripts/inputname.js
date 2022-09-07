@@ -1,4 +1,5 @@
 import { storage } from "./storage.js";
+import load from "./window_load.js";
 
 console.log(window.location.href);
 const params = new URLSearchParams(window.location.search);
@@ -60,20 +61,4 @@ submitBtn.addEventListener("click", function (e) {
   window.location.href = "answerQuestions.html";
 });
 
-//  The link takes the user to result page
-//and we want to move the table from success.js to where the unique link is generated.
-//  Yes I did
-//  Not really but I want the user to be able to see who has answered their uestions from just clicking the link
-// Also the loading of the page is very very slow
-// All of them I asked a couple of people to help me test and they didnt really enjoy the slow loading of the page
-// If they dont have the link to the result page they wont see the result. and you know its not everyone that will do that.
-
-// To do
-
-//  Work on moving the table from result to sucess
-
-//  When they come on the page if they have asked the questions direct them to result.js
-
-//  Nothing else
-
-// For Table Session
+load();

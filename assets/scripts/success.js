@@ -1,6 +1,5 @@
 import { storage } from "./storage.js";
-
-// const firstName = localStorage.getItem("first-name");
+import load from "./window_load.js";
 const firstName = storage.firstName;
 const shortUrl = localStorage.getItem(firstName);
 const pu = window.location.origin + "/" + "inputname.html?" + "id=" + shortUrl;
@@ -30,7 +29,7 @@ const newPlayerBtn = document.getElementById("play-btn");
 
 const newId = localStorage.getItem("unique-id");
 
-fetch("https://intense-oasis-82033.herokuapp.com/get_scoreboard/" + newId, {
+fetch("https://intense-oasis-82033.herokuapp.com/get_scoreboard/" + shortUrl, {
   method: "GET",
 })
   .then((result) => result.json())
@@ -49,3 +48,5 @@ fetch("https://intense-oasis-82033.herokuapp.com/get_scoreboard/" + newId, {
     }
   })
   .catch((err) => console.log(err));
+
+load();

@@ -1,4 +1,5 @@
 import { storage } from "./storage.js";
+import load from "./window_load.js";
 
 const form = document.getElementById("form");
 console.log(form);
@@ -15,3 +16,5 @@ form.addEventListener("submit", function (e) {
 
   window.location.href = "questions.html";
 });
+
+load();

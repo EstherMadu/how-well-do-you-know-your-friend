@@ -1,3 +1,5 @@
+import load from "./window_load.js";
+
 const playersName = localStorage.getItem("players-name");
 
 const table = document.getElementById("table");
@@ -35,3 +37,5 @@ newPlayerBtn.addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href = "index.html";
 });
+
+load();
