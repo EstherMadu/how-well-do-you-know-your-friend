@@ -10,6 +10,7 @@ body {
   position: relative;
   background-color: white;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 .container {
   margin-top: 70px;
@@ -55,9 +56,4 @@ th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
-}
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
 }

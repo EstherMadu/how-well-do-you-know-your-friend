@@ -35,7 +35,8 @@ div .options {
 
 /* Page Loader */
 .cssload-preloader {
-  position: absolute;
+  background: white;
+  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -69,7 +70,7 @@ div .options {
   color: rgb(255, 255, 255);
 }
 .cssload-preloader .cssload-preloader-box > div:nth-child(1) {
-  background: rgb(51, 102, 255);
+  background: rgb(170, 169, 169);
   margin-right: 15px;
   animation: cssload-movement 690ms ease 0ms infinite alternate;
   -o-animation: cssload-movement 690ms ease 0ms infinite alternate;
@@ -78,7 +79,7 @@ div .options {
   -moz-animation: cssload-movement 690ms ease 0ms infinite alternate;
 }
 .cssload-preloader .cssload-preloader-box > div:nth-child(2) {
-  background: rgb(51, 102, 255);
+  background: rgb(170, 169, 169);
   margin-right: 15px;
   animation: cssload-movement 690ms ease 86.25ms infinite alternate;
   -o-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
@@ -87,7 +88,7 @@ div .options {
   -moz-animation: cssload-movement 690ms ease 86.25ms infinite alternate;
 }
 .cssload-preloader .cssload-preloader-box > div:nth-child(3) {
-  background: rgb(51, 102, 255);
+  background: rgb(170, 169, 169);
   margin-right: 15px;
   animation: cssload-movement 690ms ease 172.5ms infinite alternate;
   -o-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
@@ -96,7 +97,7 @@ div .options {
   -moz-animation: cssload-movement 690ms ease 172.5ms infinite alternate;
 }
 .cssload-preloader .cssload-preloader-box > div:nth-child(4) {
-  background: rgb(51, 102, 255);
+  background: rgb(170, 169, 169);
   margin-right: 15px;
   animation: cssload-movement 690ms ease 258.75ms infinite alternate;
   -o-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
@@ -105,7 +106,7 @@ div .options {
   -moz-animation: cssload-movement 690ms ease 258.75ms infinite alternate;
 }
 .cssload-preloader .cssload-preloader-box > div:nth-child(5) {
-  background: rgb(51, 102, 255);
+  background: rgb(170, 169, 169);
   margin-right: 15px;
   animation: cssload-movement 690ms ease 345ms infinite alternate;
   -o-animation: cssload-movement 690ms ease 345ms infinite alternate;
@@ -114,7 +115,7 @@ div .options {
   -moz-animation: cssload-movement 690ms ease 345ms infinite alternate;
 }
 .cssload-preloader .cssload-preloader-box > div:nth-child(6) {
-  background: rgb(51, 102, 255);
+  background: rgb(170, 169, 169);
   margin-right: 15px;
   animation: cssload-movement 690ms ease 431.25ms infinite alternate;
   -o-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
@@ -123,7 +124,7 @@ div .options {
   -moz-animation: cssload-movement 690ms ease 431.25ms infinite alternate;
 }
 .cssload-preloader .cssload-preloader-box > div:nth-child(7) {
-  background: rgb(51, 102, 255);
+  background: rgb(170, 169, 169);
   margin-right: 15px;
   animation: cssload-movement 690ms ease 517.5ms infinite alternate;
   -o-animation: cssload-movement 690ms ease 517.5ms infinite alternate;
@@ -139,8 +140,8 @@ div .options {
   }
   to {
     transform: scale(1.5) translateY(-24px) rotateX(45deg);
-    box-shadow: 0 24px 39px rgb(51, 102, 255);
-    background: rgb(51, 102, 255);
+    box-shadow: 0 24px 39px rgb(170, 169, 169);
+    background: rgb(170, 169, 169);
   }
 }
 
@@ -151,8 +152,8 @@ div .options {
   }
   to {
     -o-transform: scale(1.5) translateY(-24px) rotateX(45deg);
-    box-shadow: 0 24px 39px rgb(51, 102, 255);
-    background: rgb(51, 102, 255);
+    box-shadow: 0 24px 39px rgb(170, 169, 169);
+    background: rgb(170, 169, 169);
   }
 }
 
@@ -163,8 +164,8 @@ div .options {
   }
   to {
     -ms-transform: scale(1.5) translateY(-24px) rotateX(45deg);
-    box-shadow: 0 24px 39px rgb(51, 102, 255);
-    background: rgb(51, 102, 255);
+    box-shadow: 0 24px 39px rgb(170, 169, 169);
+    background: rgb(170, 169, 169);
   }
 }
 
@@ -175,8 +176,8 @@ div .options {
   }
   to {
     -webkit-transform: scale(1.5) translateY(-24px) rotateX(45deg);
-    box-shadow: 0 24px 39px rgb(51, 102, 255);
-    background: rgb(51, 102, 255);
+    box-shadow: 0 24px 39px rgb(170, 169, 169);
+    background: rgb(170, 169, 169);
   }
 }
 
@@ -187,7 +188,7 @@ div .options {
   }
   to {
     -moz-transform: scale(1.5) translateY(-24px) rotateX(45deg);
-    box-shadow: 0 24px 39px rgb(51, 102, 255);
-    background: rgb(51, 102, 255);
+    box-shadow: 0 24px 39px rgb(170, 169, 169);
+    background: rgb(170, 169, 169);
   }
 }

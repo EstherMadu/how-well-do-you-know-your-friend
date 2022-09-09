@@ -1,5 +1,6 @@
 import { storage } from "./storage.js";
 import load from "./window_load.js";
+
 const firstName = storage.firstName;
 const shortUrl = localStorage.getItem(firstName);
 const pu = window.location.origin + "/" + "inputname.html?" + "id=" + shortUrl;
