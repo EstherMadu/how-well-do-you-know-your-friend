@@ -12,8 +12,6 @@ if (localStorage.getItem(getId) === "true") {
   window.location.href = "result.html";
 }
 
-//const obj = {};
-
 const answersLoad = JSON.parse(answers);
 console.log(answersLoad);
 
@@ -21,11 +19,9 @@ const allFirstName = document.querySelectorAll("#first-name");
 const firstName = storage.firstName;
 
 console.log(firstName);
-//const playerName = storage.playerName;
 
 document.getElementById("first-name").textContent = firstName;
 
-//const submitBtn = document.getElementById("main-btn");
 const options = document.querySelectorAll(".options");
 
 const postResult = async function (data) {
@@ -81,7 +77,6 @@ function handleSubmit() {
   console.log(result);
   const playerName = localStorage.getItem("players-name");
   const answerObj = localStorage.getItem("scoreboard");
-  // console.log(answerObj);
 
   let newestObj = {};
   if (answerObj === null) {

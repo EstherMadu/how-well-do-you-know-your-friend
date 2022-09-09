@@ -4,11 +4,9 @@ import load from "./window_load.js";
 const answers = {};
 const firstName = storage.firstName;
 const allFirstName = document.querySelectorAll("#first-name");
-//const submitBtn = document.getElementById("main-btn");
 const options = document.querySelectorAll(".options");
-//const hideQuestions = document.querySelectorAll(".first-question");
-//const form = document.getElementById("form");
-document.querySelectorAll("#first-name").textContent = firstName;
+
+allFirstName.textContent = firstName;
 
 const doPost = async function (data) {
   // call function inside this function

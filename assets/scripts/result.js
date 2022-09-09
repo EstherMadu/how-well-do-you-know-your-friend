@@ -1,11 +1,13 @@
 import { storage } from "./storage.js";
 import load from "./window_load.js";
 
-const playersName = storage.playerName;
+const firstName = storage.firstName;
+
+//const playersName = storage.playerName;
 const table = document.getElementById("table");
 console.log(table);
 const playerName = document.getElementById("user-name");
-playerName.textContent = playersName;
+playerName.textContent = firstName;
 const newPlayerBtn = document.getElementById("play-btn");
 const newId = localStorage.getItem("unique-id");
 

@@ -1,24 +1,20 @@
 import { storage } from "./storage.js";
 import load from "./window_load.js";
 
-console.log(window.location.href);
 const params = new URLSearchParams(window.location.search);
 const newId = params.get("id");
 
 localStorage.setItem("unique-id", newId);
-//newId = storage.uniqueId;
 
 console.log(newId, localStorage.getItem(newId));
 if (localStorage.getItem(newId) === "true") {
   window.location.href = "success.html";
 }
 
-//const form = document.getElementById("form");
 const submitBtn = document.getElementById("btn1");
 const firstName = storage.firstName;
 console.log(firstName);
 const playerNameInput = document.getElementById("players-name");
-// document.getElementById("user-name").textContent = firstName;
 
 const doPost = async function (data) {
   // call function inside this function
