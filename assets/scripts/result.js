@@ -6,10 +6,7 @@ const table = document.getElementById("table");
 console.log(table);
 const playerName = document.getElementById("user-name");
 playerName.textContent = playersName;
-
-//const playerScore = document.getElementById("score");
 const newPlayerBtn = document.getElementById("play-btn");
-
 const newId = localStorage.getItem("unique-id");
 
 fetch("https://intense-oasis-82033.herokuapp.com/get_scoreboard/" + newId, {

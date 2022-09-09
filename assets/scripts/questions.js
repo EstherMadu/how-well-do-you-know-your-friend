@@ -3,12 +3,11 @@ import load from "./window_load.js";
 
 const answers = {};
 const firstName = storage.firstName;
-//localStorage.getItem("first-name");
 const allFirstName = document.querySelectorAll("#first-name");
-const submitBtn = document.getElementById("main-btn");
+//const submitBtn = document.getElementById("main-btn");
 const options = document.querySelectorAll(".options");
-const hideQuestions = document.querySelectorAll(".first-question");
-const form = document.getElementById("form");
+//const hideQuestions = document.querySelectorAll(".first-question");
+//const form = document.getElementById("form");
 document.querySelectorAll("#first-name").textContent = firstName;
 
 const doPost = async function (data) {

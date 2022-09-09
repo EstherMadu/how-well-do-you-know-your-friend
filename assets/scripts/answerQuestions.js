@@ -6,12 +6,13 @@ console.log(getId);
 
 let result = 0;
 const answers = storage.answer;
-//localStorage.getItem("challengeAnswers");
+
 console.log(answers);
 if (localStorage.getItem(getId) === "true") {
   window.location.href = "result.html";
 }
-const obj = {};
+
+//const obj = {};
 
 const answersLoad = JSON.parse(answers);
 console.log(answersLoad);
@@ -20,14 +21,12 @@ const allFirstName = document.querySelectorAll("#first-name");
 const firstName = storage.firstName;
 
 console.log(firstName);
-const playerName = storage.playerName;
+//const playerName = storage.playerName;
 
 document.getElementById("first-name").textContent = firstName;
 
-const submitBtn = document.getElementById("main-btn");
+//const submitBtn = document.getElementById("main-btn");
 const options = document.querySelectorAll(".options");
-// const hideQuestions = document.querySelectorAll(".first-question");
-// console.log(hideQuestions);
 
 const postResult = async function (data) {
   const apiResult = await fetch(
@@ -107,7 +106,6 @@ function handleSubmit() {
     .then((result) => {
       console.log(result);
       localStorage.setItem(getId, true);
-
       window.location.href = "result.html";
     })
     .catch((err) => {
@@ -116,7 +114,3 @@ function handleSubmit() {
 }
 
 load();
-
-// $(window).on("load", function () {
-//   $(".cssload-preloader").fadeOut("slow");
-// });

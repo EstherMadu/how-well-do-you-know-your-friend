@@ -7,28 +7,15 @@ const pu = window.location.origin + "/" + "inputname.html?" + "id=" + shortUrl;
 console.log(shortUrl, firstName);
 const urlBtn = document.getElementById("url-btn");
 const uniqueUrl = document.getElementById("url");
-
 uniqueUrl.value = pu;
+const table = document.getElementById("table");
+console.log(table);
 
 urlBtn.addEventListener("click", function () {
   let copyText = document.getElementById("url");
   copyText.select();
   navigator.clipboard.writeText(copyText.value);
 });
-
-//  For Table
-
-//const playersName = localStorage.getItem("players-name");
-
-const table = document.getElementById("table");
-console.log(table);
-
-//const playerName = document.getElementById("input-name");
-
-//const playerScore = document.getElementById("score");
-//const newPlayerBtn = document.getElementById("play-btn");
-
-const newId = localStorage.getItem("unique-id");
 
 fetch("https://intense-oasis-82033.herokuapp.com/get_scoreboard/" + shortUrl, {
   method: "GET",

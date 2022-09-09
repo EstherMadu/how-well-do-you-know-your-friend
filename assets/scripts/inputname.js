@@ -13,7 +13,7 @@ if (localStorage.getItem(newId) === "true") {
   window.location.href = "success.html";
 }
 
-const form = document.getElementById("form");
+//const form = document.getElementById("form");
 const submitBtn = document.getElementById("btn1");
 const firstName = storage.firstName;
 console.log(firstName);
@@ -46,7 +46,6 @@ doPost({
 
     document.getElementById("user-name").textContent = result.owner_id;
     storage.answer = JSON.stringify(result.answers);
-    //localStorage.setItem("challengeAnswers", JSON.stringify(result.answers));
   })
   .catch((err) => {
     console.log("It failed woefully" + err);
@@ -56,8 +55,6 @@ submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
   const playerName = playerNameInput.value;
   storage.playerName = playerName;
-  console.log(playerName);
-
   window.location.href = "answerQuestions.html";
 });
 
