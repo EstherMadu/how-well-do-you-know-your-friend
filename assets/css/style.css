@@ -15,7 +15,7 @@ body {
 .container {
   margin-top: 70px;
   position: absolute;
-  padding: 0 9%;
+  padding: 0 12%;
   font-family: "Poppins", sans-serif;
 }
 
@@ -37,6 +37,11 @@ main .first-question {
 .unique {
   margin: 0 auto;
   padding: 0 auto;
+}
+
+.share {
+  margin: 4px 12px;
+  padding-left: 350px;
 }
 
 /* Design for table */

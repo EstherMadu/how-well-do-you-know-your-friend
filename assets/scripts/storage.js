@@ -27,7 +27,7 @@ export class Storage {
 
   set uniqueId(value) {
     localStorage.setItem("unique-Id", value);
-    console.log("players-name set", value);
+    // console.log("players-name set", value);
   }
   set answer(value) {
     localStorage.setItem("challengeAnswers", value);

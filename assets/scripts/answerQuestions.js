@@ -49,8 +49,8 @@ options.forEach((option) => {
     const questionId = this.getAttribute("data-question-id");
     const currentQuestion = document.getElementById(`question-${questionId}`);
     const nextQuestion = document.getElementById(`question-${+questionId + 1}`);
-    console.log(currentQuestion);
-    console.log(`${questionId} : ${this.id}`);
+    // console.log(currentQuestion);
+    // console.log(`${questionId} : ${this.id}`);
     if (answersLoad[questionId] === this.id) {
       this.style.border = "2px solid #00FF00";
       result += 2;

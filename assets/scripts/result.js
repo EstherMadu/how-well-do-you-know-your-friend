@@ -17,15 +17,20 @@ fetch("https://intense-oasis-82033.herokuapp.com/get_scoreboard/" + newId, {
   .then((result) => result.json())
   .then((data) => {
     console.log(data);
-    const playerResult = data.results;
-    console.log(playerResult);
-    for (const key in playerResult) {
-      let row = table.insertRow(1);
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      cell1.textContent = key;
-      cell2.textContent = playerResult[key];
-      console.log(`${key}: ${playerResult[key]}`);
+    const results = data.results;
+    for (const index in results) {
+      const playerResult = results[index];
+
+      console.log(playerResult);
+      for (const key in playerResult) {
+        console.log(key);
+        let row = table.insertRow(1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.textContent = key;
+        cell2.textContent = playerResult[key];
+        console.log(`${key}: ${playerResult[key]}`);
+      }
     }
   })
   .catch((err) => console.log(err));

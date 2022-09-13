@@ -12,8 +12,6 @@ if (localStorage.getItem(newId) === "true") {
 }
 
 const submitBtn = document.getElementById("btn1");
-const firstName = storage.firstName;
-console.log(firstName);
 const playerNameInput = document.getElementById("players-name");
 
 const doPost = async function (data) {
@@ -39,6 +37,7 @@ doPost({
     console.log(result);
     console.log(result.owner_id);
     storage.firstName = result.owner_id;
+    localStorage.setItem(result.owner_id, newId);
 
     document.getElementById("user-name").textContent = result.owner_id;
     storage.answer = JSON.stringify(result.answers);
