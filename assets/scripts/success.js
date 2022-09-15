@@ -50,10 +50,12 @@ whatsApp.addEventListener("click", function () {
   let message = pu;
 
   window.open(
-    "whatsapp://send?text= Please use this link to answer some questions to see how well you know " +
+    "whatsapp://send?text= How well do you know " +
       `${firstName}` +
       " 😃🤪😂" +
-      "                                                 " +
+      "                                                                                                                                                                   " +
+      "Click on the link to find out👇🏼👇🏼 " +
+      "                                                                                                           " +
       message,
 
     "_blank"
